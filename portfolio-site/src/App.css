@@ -306,7 +306,6 @@
   border-radius: 16px;
   border: 1px solid rgba(26, 26, 26, 0.08);
   box-shadow: 0 12px 30px rgba(17, 17, 17, 0.04);
-  max-width: 420px;
 }
 
 .contact-list {
@@ -331,7 +330,7 @@
 }
 
 .contact-list__label::after {
-  content: ':';
+  content: ":";
   margin-left: 6px;
   color: #6b6e75;
   font-weight: 500;
@@ -413,7 +412,6 @@
     padding: 18px 20px;
   }
 }
-
 
 .about__content {
   display: grid;

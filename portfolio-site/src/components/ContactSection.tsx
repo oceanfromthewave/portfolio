@@ -1,22 +1,25 @@
-﻿import type { FC, ReactNode } from 'react'
-import type { Contact } from '../types/content'
+﻿import type { FC, ReactNode } from "react";
+import type { Contact } from "../types/content";
 
 type ContactSectionProps = {
-  contact: Contact
-}
+  contact: Contact;
+};
 
 type ContactEntry = {
-  label: string
-  value: ReactNode
-}
+  label: string;
+  value: ReactNode;
+};
 
 const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
-  const entries: ContactEntry[] = []
-  const githubUsername = contact.github?.replace(/^https?:\/\/(www\.)?github\.com\//i, '')
+  const entries: ContactEntry[] = [];
+  const githubUsername = contact.github?.replace(
+    /^https?:\/\/(www\.)?github\.com\//i,
+    ""
+  );
 
   if (contact.github) {
     entries.push({
-      label: 'GitHub',
+      label: "GitHub",
       value: (
         <a
           href={contact.github}
@@ -24,15 +27,17 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {githubUsername ? `@${githubUsername}` : contact.github.replace(/^https?:\/\//i, '')}
+          {githubUsername
+            ? `@${githubUsername}`
+            : contact.github.replace(/^https?:\/\//i, "")}
         </a>
       ),
-    })
+    });
   }
 
   if (contact.email) {
     entries.push({
-      label: 'Email',
+      label: "Email",
       value: (
         <a
           href={`mailto:${contact.email}`}
@@ -41,32 +46,31 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
           {contact.email}
         </a>
       ),
-    })
+    });
   }
 
   if (contact.phone) {
     entries.push({
-      label: 'Phone',
+      label: "Phone",
       value: <span className="contact-list__value">{contact.phone}</span>,
-    })
+    });
   }
 
   return (
     <section className="section">
       <h2>연락처</h2>
       <div className="contact">
-        <ul className="contact-list">
-          {entries.map((entry) => (
-            <li className="contact-list__item" key={entry.label}>
-              <span className="contact-list__label">{entry.label}</span>
-              {entry.value}
-            </li>
-          ))}
-        </ul>
+        {entries.map((entry) => (
+          <li className="contact-list__item" key={entry.label}>
+            <span className="contact-list__label">{entry.label}</span>
+            {entry.value}
+          </li>
+        ))}
+
         {contact.note ? <p className="contact-note">{contact.note}</p> : null}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactSection
+export default ContactSection;
