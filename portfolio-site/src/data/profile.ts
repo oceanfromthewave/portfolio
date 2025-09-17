@@ -14,7 +14,7 @@ export const hero = {
   eyebrow: '웹 개발자 | 공공 민원 시스템',
   title: '💻Hello World!',
   meta: {
-    role: '주식회사 올림 | 개발3팀 (2023.04 - 현재)',
+    role: '주식회사 울림 | 개발3팀 (2023.04 - 현재)',
     duty: '웹 개발자 | 민원 시스템 구축 · 고도화 · 운영',
   },
 }
@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
     id: 'training-maintenance-2025',
     period: '2025 - 진행 중',
     title: '교육이력관리시스템 유지보수',
-    organization: '주식회사 올림 | 개발3팀',
+    organization: '주식회사 울림 | 개발3팀',
     summary:
       'Spring과 JSP 기반 환경에서 신규 요구사항을 빠르게 반영하고 안정적인 운영을 책임지고 있습니다.',
     achievements: [
@@ -89,7 +89,7 @@ export const experiences: Experience[] = [
     id: 'vet-medicine-upgrade-2024',
     period: '2024',
     title: '동물용의약품 정보관리시스템 고도화',
-    organization: '주식회사 올림 | 개발3팀',
+    organization: '주식회사 울림 | 개발3팀',
     summary: '민원사무 변경과 정보 제공 기능을 고도화해 민원인의 경험을 향상시켰습니다.',
     achievements: [
       'Nexacro 기반 화면 개편(방문상담예약, 기술검토 Rollback 등)으로 복잡한 민원 흐름 단순화',
@@ -105,7 +105,7 @@ export const experiences: Experience[] = [
     id: 'vet-medicine-rebuild-2023',
     period: '2023',
     title: '동물용의약품 정보관리시스템 재구축',
-    organization: '주식회사 올림 | 개발3팀',
+    organization: '주식회사 울림 | 개발3팀',
     summary: '대민 민원 처리 화면을 신규 구축하며 데이터 신뢰성과 사용성을 높였습니다.',
     achievements: [
       '국가출하승인, 제조 · 수입 신고, 자가백신 신고 등 민원 화면 신규 개발과 기능 구현',
