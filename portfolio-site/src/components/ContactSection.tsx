@@ -60,12 +60,14 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
     <section className="section">
       <h2>연락처</h2>
       <div className="contact">
-        {entries.map((entry) => (
-          <li className="contact-list__item" key={entry.label}>
-            <span className="contact-list__label">{entry.label}</span>
-            {entry.value}
-          </li>
-        ))}
+        <ul className="contact-list">
+          {entries.map((entry) => (
+            <li className="contact-list__item" key={entry.label}>
+              <span className="contact-list__label">{entry.label}</span>
+              {entry.value}
+            </li>
+          ))}
+        </ul>
 
         {contact.note ? <p className="contact-note">{contact.note}</p> : null}
       </div>

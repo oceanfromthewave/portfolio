@@ -1,8 +1,8 @@
-﻿import type { FC } from 'react'
+﻿import type { FC } from "react";
 
 type HighlightsSectionProps = {
-  items: string[]
-}
+  items: string[];
+};
 
 const HighlightsSection: FC<HighlightsSectionProps> = ({ items }) => {
   return (
@@ -14,7 +14,7 @@ const HighlightsSection: FC<HighlightsSectionProps> = ({ items }) => {
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default HighlightsSection
+export default HighlightsSection;

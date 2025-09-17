@@ -1,9 +1,9 @@
-﻿import type { FC } from 'react'
-import type { About } from '../types/content'
+﻿import type { FC } from "react";
+import type { About } from "../types/content";
 
 type AboutSectionProps = {
-  about: About
-}
+  about: About;
+};
 
 const AboutSection: FC<AboutSectionProps> = ({ about }) => {
   return (
@@ -18,7 +18,7 @@ const AboutSection: FC<AboutSectionProps> = ({ about }) => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

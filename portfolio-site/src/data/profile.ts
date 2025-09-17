@@ -11,7 +11,7 @@
 } from '../types/content'
 
 export const hero = {
-  eyebrow: '웹 개발자 | 공공 민원 시스템',
+
   title: '💻Hello World!',
   summary:
     '사용자와 현장을 이해하는 웹 개발자입니다. 민원 시스템의 요구를 빠르게 파악해 실용적인 개선으로 연결합니다.',
@@ -127,15 +127,15 @@ export const skillSets: SkillSet[] = [
   },
   {
     label: '클라이언트 & UI',
-    items: ['Nexacro', 'JavaScript', 'Bootstrap'],
+    items: ['Nexacro', 'JavaScript', 'Bootstrap','React'],
   },
   {
     label: '데이터 & 인프라',
-    items: ['Oracle', 'OracleDB', 'MySQL', 'SQL', 'WAS', 'Linux'],
+    items: ['Oracle', 'OracleDB', 'MySQL', 'SQL', 'WAS', 'Linux','Docker'],
   },
   {
     label: '협업 & 도구',
-    items: ['GitHub'],
+    items: ['GitHub',],
   },
 ]
 

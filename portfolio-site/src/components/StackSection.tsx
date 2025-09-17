@@ -1,9 +1,9 @@
-﻿import type { FC } from 'react'
-import type { SkillSet } from '../types/content'
+﻿import type { FC } from "react";
+import type { SkillSet } from "../types/content";
 
 type StackSectionProps = {
-  items: SkillSet[]
-}
+  items: SkillSet[];
+};
 
 const StackSection: FC<StackSectionProps> = ({ items }) => {
   return (
@@ -24,7 +24,7 @@ const StackSection: FC<StackSectionProps> = ({ items }) => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default StackSection
+export default StackSection;

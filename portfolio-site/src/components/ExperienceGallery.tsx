@@ -1,47 +1,50 @@
-﻿import { useEffect, useMemo, useState, type FC } from 'react'
-import type { Experience } from '../types/content'
+﻿import { useEffect, useMemo, useState, type FC } from "react";
+import type { Experience } from "../types/content";
 
 type ExperienceGalleryProps = {
-  items: Experience[]
-}
+  items: Experience[];
+};
 
 const ExperienceGallery: FC<ExperienceGalleryProps> = ({ items }) => {
-  const [activeId, setActiveId] = useState<string | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(null);
   const activeItem = useMemo(
-    () => (activeId ? items.find((experience) => experience.id === activeId) ?? null : null),
-    [items, activeId],
-  )
+    () =>
+      activeId
+        ? items.find((experience) => experience.id === activeId) ?? null
+        : null,
+    [items, activeId]
+  );
 
   useEffect(() => {
     if (!activeId) {
-      return undefined
+      return undefined;
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setActiveId(null)
+      if (event.key === "Escape") {
+        setActiveId(null);
       }
-    }
+    };
 
-    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [activeId])
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeId]);
 
   useEffect(() => {
     if (!activeId) {
-      return undefined
+      return undefined;
     }
 
-    const { body } = document
-    const previousOverflow = body.style.overflow
-    body.style.overflow = 'hidden'
+    const { body } = document;
+    const previousOverflow = body.style.overflow;
+    body.style.overflow = "hidden";
 
     return () => {
-      body.style.overflow = previousOverflow
-    }
-  }, [activeId])
+      body.style.overflow = previousOverflow;
+    };
+  }, [activeId]);
 
   return (
     <section className="section experience-section">
@@ -56,19 +59,35 @@ const ExperienceGallery: FC<ExperienceGalleryProps> = ({ items }) => {
             aria-label={`${experience.title} 상세 보기`}
           >
             <div className="experience-gallery__thumbnail">
-              <img src={experience.thumbnail} alt={experience.thumbnailAlt} loading="lazy" />
+              <img
+                src={experience.thumbnail}
+                alt={experience.thumbnailAlt}
+                loading="lazy"
+              />
             </div>
             <div className="experience-gallery__meta">
-              <span className="experience-gallery__period">{experience.period}</span>
-              <span className="experience-gallery__title">{experience.title}</span>
+              <span className="experience-gallery__period">
+                {experience.period}
+              </span>
+              <span className="experience-gallery__title">
+                {experience.title}
+              </span>
             </div>
           </button>
         ))}
       </div>
 
       {activeItem ? (
-        <div className="experience-modal" role="dialog" aria-modal="true" aria-labelledby={`experience-${activeItem.id}-title`}>
-          <div className="experience-modal__backdrop" onClick={() => setActiveId(null)} />
+        <div
+          className="experience-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={`experience-${activeItem.id}-title`}
+        >
+          <div
+            className="experience-modal__backdrop"
+            onClick={() => setActiveId(null)}
+          />
           <article className="experience-modal__panel">
             <button
               type="button"
@@ -98,7 +117,7 @@ const ExperienceGallery: FC<ExperienceGalleryProps> = ({ items }) => {
         </div>
       ) : null}
     </section>
-  )
-}
+  );
+};
 
-export default ExperienceGallery
+export default ExperienceGallery;
