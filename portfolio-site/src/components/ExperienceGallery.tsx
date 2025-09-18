@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState, type FC } from "react";
+import { useEffect, useMemo, useState, type FC } from "react";
 import type { Experience } from "../types/content";
 
 type ExperienceGalleryProps = {
@@ -93,7 +93,7 @@ const ExperienceGallery: FC<ExperienceGalleryProps> = ({ items }) => {
               type="button"
               className="experience-modal__close"
               onClick={() => setActiveId(null)}
-              aria-label="상세 닫기"
+              aria-label="팝업 닫기"
             >
               ×
             </button>
@@ -121,3 +121,4 @@ const ExperienceGallery: FC<ExperienceGalleryProps> = ({ items }) => {
 };
 
 export default ExperienceGallery;
+

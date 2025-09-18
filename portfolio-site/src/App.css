@@ -270,6 +270,7 @@
   border-radius: 999px;
   background: #e9ecef;
   color: var(--color-text-secondary);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -285,7 +286,17 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 0 16px;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+/* Dark theme: improve tag contrast */
+[data-theme='dark'] .tag {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+[data-theme='dark'] .tag:hover {
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .timeline {
@@ -374,13 +385,13 @@
 .contact-link {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
   text-decoration: underline;
-  text-decoration-color: rgba(74, 97, 197, 0.4);
+  text-underline-offset: 2px;
 }
 
 .contact-link:hover {
-  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
 }
 
 .contact-note {
@@ -491,13 +502,13 @@
 
 .resources__link {
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
   text-decoration: underline;
-  text-decoration-color: rgba(74, 97, 197, 0.4);
+  text-underline-offset: 2px;
 }
 
 .resources__link:hover {
-  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
 }
 
 .resources__description {
@@ -558,26 +569,35 @@
 }
 
 .cta__button--primary {
-  background: var(--color-accent);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(0, 122, 255, 0.35);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-s);
 }
 
 .cta__button--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-m);
 }
 
 .cta__button--secondary {
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
   border: 1px solid var(--color-border);
 }
 
 .cta__button--secondary:hover {
-  background: rgba(0, 122, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
   transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0, 122, 255, 0.25);
+  box-shadow: var(--shadow-m);
+}
+
+/* Dark theme hover surfaces for neutral buttons */
+[data-theme='dark'] .cta__button--secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+[data-theme='dark'] .cta__button--primary:hover {
+  box-shadow: var(--shadow-m);
 }
 
 @media (min-width: 768px) {

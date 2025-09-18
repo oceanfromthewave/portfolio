@@ -1,4 +1,4 @@
-﻿import type { FC } from "react";
+import type { FC } from "react";
 import type { ExternalLink } from "../types/content";
 
 type ExternalLinksSectionProps = {
@@ -12,7 +12,7 @@ const ExternalLinksSection: FC<ExternalLinksSectionProps> = ({ links }) => {
 
   return (
     <section className="section resources">
-      <h2>참고 링크</h2>
+      <h2>외부 링크</h2>
       <ul className="resources__list">
         {links.map((link) => (
           <li key={link.href} className="resources__item">
@@ -35,3 +35,4 @@ const ExternalLinksSection: FC<ExternalLinksSectionProps> = ({ links }) => {
 };
 
 export default ExternalLinksSection;
+

@@ -1,4 +1,4 @@
-﻿import type { FC } from "react";
+import type { FC } from "react";
 import type { SkillSet } from "../types/content";
 
 type StackSectionProps = {
@@ -28,3 +28,4 @@ const StackSection: FC<StackSectionProps> = ({ items }) => {
 };
 
 export default StackSection;
+

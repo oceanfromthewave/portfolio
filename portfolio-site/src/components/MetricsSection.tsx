@@ -1,4 +1,4 @@
-﻿import type { FC } from "react";
+import type { FC } from "react";
 import type { Metric } from "../types/content";
 
 type MetricsSectionProps = {
@@ -8,7 +8,7 @@ type MetricsSectionProps = {
 const MetricsSection: FC<MetricsSectionProps> = ({ metrics }) => {
   return (
     <section className="section metrics">
-      <h2>숫자로 보는 역량</h2>
+      <h2>핵심 지표</h2>
       <div className="metrics__grid">
         {metrics.map((metric) => (
           <article className="metric-card" key={metric.label}>
@@ -25,3 +25,4 @@ const MetricsSection: FC<MetricsSectionProps> = ({ metrics }) => {
 };
 
 export default MetricsSection;
+

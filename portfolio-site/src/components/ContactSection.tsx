@@ -1,4 +1,4 @@
-﻿import type { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import type { Contact } from "../types/content";
 
 type ContactSectionProps = {
@@ -76,3 +76,4 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
 };
 
 export default ContactSection;
+

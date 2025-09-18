@@ -1,7 +1,6 @@
-﻿import type { FC } from 'react'
+import type { FC } from 'react'
 
 export type HeroSectionProps = {
-  eyebrow: string
   title: string
   summary: string
   meta: {
@@ -10,19 +9,18 @@ export type HeroSectionProps = {
   }
 }
 
-const HeroSection: FC<HeroSectionProps> = ({ eyebrow, title, summary, meta }) => {
+const HeroSection: FC<HeroSectionProps> = ({ title, summary, meta }) => {
   return (
     <header className="hero">
-      <p className="hero__eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p className="hero__summary">{summary}</p>
       <div className="hero__meta">
         <div>
-          <span className="meta-label">재직</span>
+          <span className="meta-label">역할</span>
           <span>{meta.role}</span>
         </div>
         <div>
-          <span className="meta-label">담당</span>
+          <span className="meta-label">업무</span>
           <span>{meta.duty}</span>
         </div>
       </div>
