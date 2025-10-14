@@ -2,7 +2,6 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 import AboutSection from "./components/AboutSection";
-import CallToActionSection from "./components/CallToActionSection";
 import ContactSection from "./components/ContactSection";
 import ExperienceGallery from "./components/ExperienceGallery";
 import ExternalLinksSection from "./components/ExternalLinksSection";
@@ -13,7 +12,7 @@ import StackSection from "./components/StackSection";
 import TimelineSection from "./components/TimelineSection";
 import {
   about,
-  callToAction,
+  
   contact,
   education,
   experiences,
@@ -165,7 +164,7 @@ function App() {
               }))}
             />
           </section>
-          <CallToActionSection cta={callToAction} />
+          {/** Call-to-action section removed per request **/}
           <section id="contact" className="section-anchor">
             <ContactSection contact={contact} />
           </section>

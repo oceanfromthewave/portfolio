@@ -16,7 +16,7 @@ export const hero = {
   summary:
     '사용자와 현장을 이해하는 웹 개발자입니다. 민원 시스템의 요구를 빠르게 파악해 실용적인 개선으로 연결합니다.',
   meta: {
-    role: '주식회사 울림 | 개발3팀 (2023.04 - 현재)',
+    role: '주식회사 울림 | 개발3팀 (2023.04 - 2025.09)',
     duty: '웹 개발자 | 민원 시스템 구축 · 고도화 · 운영',
   },
 }
@@ -40,7 +40,7 @@ export const about: About = {
 
 export const metrics: Metric[] = [
   {
-    value: '40+',
+    value: '1000+',
     label: 'SR / CS 이슈 해결',
     helpText: '요구사항 분석부터 기능 개선까지 직접 대응',
   },
@@ -179,6 +179,5 @@ export const callToAction: CallToAction = {
 export const contact: Contact = {
   email: 'oceanfromthewave@gmail.com',
   github: 'https://github.com/oceanfromthewave',
-  phone: '010-3176-4123',
-  note: '이메일 또는 깃허브 이슈, 전화로 연락 주시면 빠르게 답변드리겠습니다.',
+  phone: '010-3176-4123'
 }
